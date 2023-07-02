@@ -31,3 +31,4 @@ public FreeUser(string name) : base(name)
     this.AccountType = "free";
 }
 
+the base keyword tells this constructor to call the base class constructor that with paramenter name
