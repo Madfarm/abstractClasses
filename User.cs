@@ -20,6 +20,11 @@ public class User
     public int CalculateSearches()
     {
         return 30;
+    }
+
+    public override string ToString()
+    {
+        return $"Id = {this.Id} \nName = {this.Name} \nAccount Type = {this.AccountType} \nSearches = {this.NumOfSearches} \n";
     } 
 
 }
