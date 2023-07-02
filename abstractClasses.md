@@ -22,3 +22,12 @@ public class Dog : Animal
         return "bark!";
     }
 }
+
+
+when we want to use values from the abstract classes constructor we use the : also
+
+public FreeUser(string name) : base(name)
+{
+    this.AccountType = "free";
+}
+
