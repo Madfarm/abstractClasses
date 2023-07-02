@@ -9,11 +9,10 @@ public abstract class User
     public string? AccountType { get; set; }
     public int NumOfSearches { get; set; }
 
-    public User(string name, string acctype)
+    public User(string name)
     {
         this.Id = new Guid();
         this.Name = name;
-        this.AccountType = acctype;
         this.NumOfSearches = CalculateSearches();
     } 
 
@@ -28,8 +27,10 @@ public abstract class User
 
 public class FreeUser : User
 {
-    public FreeUser(string name, string acctype) : base(name, acctype)
-    { }
+    public FreeUser(string name) : base(name)
+    {
+        this.AccountType = "free";
+    }
     public override int CalculateSearches()
     {
         return 5;
