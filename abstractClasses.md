@@ -4,3 +4,21 @@ classes that cannot be instantiated and can only be accessed by inheriting the c
 blueprint for polymorphism basically
 
 - abstract methods => empty emethods that must be implemented in the inherited class
+
+
+denote abstract classes and methods with the "abstract" keyword
+
+public abstract class Animal
+{
+    public abstract string animalSound();
+}
+
+then inherit the class with :
+
+public class Dog : Animal
+{
+    public string animalSound()
+    {
+        return "bark!";
+    }
+}
