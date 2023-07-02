@@ -1,7 +1,7 @@
 ﻿
 using Users;
 
-User Jeff = new User("Jeff", "free");
+User Jeff = new FreeUser("Jeff", "free");
 
 System.Console.WriteLine(Jeff);
 

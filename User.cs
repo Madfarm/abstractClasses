@@ -2,7 +2,7 @@
 
 namespace Users;
 
-public class User 
+public abstract class User 
 {
     public Guid Id { get; set; }
     public string? Name { get; set; }
@@ -17,14 +17,21 @@ public class User
         this.NumOfSearches = CalculateSearches();
     } 
 
-    public int CalculateSearches()
-    {
-        return 30;
-    }
+    public abstract int CalculateSearches();
 
     public override string ToString()
     {
         return $"Id = {this.Id} \nName = {this.Name} \nAccount Type = {this.AccountType} \nSearches = {this.NumOfSearches} \n";
     } 
 
+}
+
+public class FreeUser : User
+{
+    public FreeUser(string name, string acctype) : base(name, acctype)
+    { }
+    public override int CalculateSearches()
+    {
+        return 5;
+    }
 }
